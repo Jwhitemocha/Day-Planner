@@ -25,10 +25,9 @@
   <body>
     <header class="jumbotron">
         <!-- First Header w/ Date & Time-->
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <h1 id="currentClock"></h1>
+      <h1 class="display-3">Work Day Schedule</h1>
+    <p id="currentDay" class="lead"></p>
+      <p1 id="currentTimer"></p1>
         
     </header>
 
@@ -50,10 +49,90 @@
         </div> 
 
         <!-- 10 AM Slot -->
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                10 AM
+            </div>
+            <div class="col-9" id="10">
+                <textarea id="ten" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save10" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                11 AM
+            </div>
+            <div class="col-9" id="eleven">
+                <textarea id="eleven" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save11" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                12 AM
+            </div>
+            <div class="col-9" id="12">
+                <textarea id="twelve" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save12" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                1 PM
+            </div>
+            <div class="col-9" id="1">
+                <textarea id="one" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save1" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                2 PM
+            </div>
+            <div class="col-9" id="2">
+                <textarea id="2" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save2" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                3 PM
+            </div>
+            <div class="col-9" id="3">
+                <textarea id="3" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save3" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                4 PM
+            </div>
+            <div class="col-9" id="4">
+                <textarea id="4" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save4" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
+
+        <div class = "row" > 
+            <div class="col-2 time-block">
+                5 PM
+            </div>
+            <div class="col-9" id="5">
+                <textarea id="5" class="col-12" type="text" placeholder=""></textarea>
+            </div>
+            <button id="save5" class="col-1 saveBtn btn btn-dark">Save</button>
+        </div>
       
     </div>
-
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
   </body>
 </html>
