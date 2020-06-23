@@ -1,138 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Planner</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Day Planner</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap">
+</head>
 
-  <body>
-    <header class="jumbotron">
-        <!-- First Header w/ Date & Time-->
-      <h1 class="display-3">Work Day Schedule</h1>
-    <p id="currentDay" class="lead"></p>
-      <p1 id="currentTimer"></p1>
-        
-    </header>
+<body>
+  <!-- Large primary header -->
+  <header class="jumbotron">
 
-        <!-- Planner Container w/ Time Slots -->
-    <div class="container">
-        <div class = "col-12"> 
+    <!-- Current date and time display -->
+    <h1 id="currentDay"></h1>
+    <h1 id="currentClock"></h1>
+  </header>
 
+  <div class="container">
+    <div class="col-12">
+
+      <!-- Timeslot 9am -->
+      <div class="row">
+        <div class="col-2 time-block">
+          9 AM
         </div>
-        <!-- 9 AM Slot -->
-        <div class = "row" >
-            <div class="col-2 time-block">
-                9 AM
-            </div>
-            <!-- Text Area for Personal Schedule-->
-            <div class="col-9" id="9"> 
-                <textarea id="nine" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save9" class="col-1 saveBtn btn btn-dark">Save</button>
-        </div> 
-
-        <!-- 10 AM Slot -->
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                10 AM
-            </div>
-            <div class="col-9" id="10">
-                <textarea id="ten" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save10" class="col-1 saveBtn btn btn-dark">Save</button>
+        <div class="col-9" id="9">
+          <textarea id="task9" class="col-12" type="text" placeholder=""></textarea>
         </div>
+        <button id="save9" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                11 AM
-            </div>
-            <div class="col-9" id="eleven">
-                <textarea id="eleven" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save11" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 10am -->
+      <div class="row">
+        <div class="col-2 time-block">
+          10 AM
         </div>
+        <div class="col-9" id="10">
+          <textarea id="task10" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save10" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                12 AM
-            </div>
-            <div class="col-9" id="12">
-                <textarea id="twelve" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save12" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 11am -->
+      <div class="row">
+        <div class="col-2 time-block">
+          11 AM
         </div>
+        <div class="col-9" id="11">
+          <textarea id="task11" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save11" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                1 PM
-            </div>
-            <div class="col-9" id="1">
-                <textarea id="one" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save1" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 12pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          12 PM
         </div>
+        <div class="col-9" id="12">
+          <textarea id="task12" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save12" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                2 PM
-            </div>
-            <div class="col-9" id="2">
-                <textarea id="2" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save2" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 1pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          1 PM
         </div>
+        <div class="col-9" id="13">
+          <textarea id="task13" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save13" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                3 PM
-            </div>
-            <div class="col-9" id="3">
-                <textarea id="3" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save3" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 2pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          2 PM
         </div>
+        <div class="col-9" id="14">
+          <textarea id="task14" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save14" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                4 PM
-            </div>
-            <div class="col-9" id="4">
-                <textarea id="4" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save4" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 3pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          3 PM
         </div>
+        <div class="col-9" id="15">
+          <textarea id="task15" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save15" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
 
-        <div class = "row" > 
-            <div class="col-2 time-block">
-                5 PM
-            </div>
-            <div class="col-9" id="5">
-                <textarea id="5" class="col-12" type="text" placeholder=""></textarea>
-            </div>
-            <button id="save5" class="col-1 saveBtn btn btn-dark">Save</button>
+      <!-- Timeslot 4pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          4 PM
         </div>
-      
+        <div class="col-9" id="16">
+          <textarea id="task16" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save16" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
+
+      <!-- Timeslot 5pm -->
+      <div class="row">
+        <div class="col-2 time-block">
+          5 PM
+        </div>
+        <div class="col-9" id="17">
+          <textarea id="task17" class="col-12" type="text" placeholder=""></textarea>
+        </div>
+        <button id="save17" class="col-1 saveBtn btn shadow-none">
+          ✓
+        </button>
+      </div>
+
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
-  </body>
+  </div>
+
+
+
+  <!-- Links to JavaScript, Moment, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
